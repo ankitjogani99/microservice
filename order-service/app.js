@@ -1,6 +1,7 @@
 const express = require('express');
 const sequelize = require('./config/database');
 const orderRoutes = require('./routes/orderRoutes');
+require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
 
 const app = express();
 app.use(express.json());

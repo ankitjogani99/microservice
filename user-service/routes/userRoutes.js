@@ -5,5 +5,6 @@ const { registerValidation, loginValidation } = require('../validations/userVali
 
 router.post('/register', registerValidation, userController.register);
 router.post('/login', loginValidation, userController.login);
+router.get('/:id', userController.getUserById);
 
 module.exports = router;
